@@ -1,0 +1,453 @@
+.banner__subtitle {
+  color: $secondary;
+  font-size: $font-2xl;
+
+  @include Mobile {
+    font-size: $font-s;
+  }
+}
+
+.banner__title {
+  color: $secondary;
+  font-size: $font-4xl;
+  font-weight: bold;
+  margin-bottom: 4px;
+
+  @include Mobile {
+    font-size: $font-xl;
+    margin-bottom: 8px;
+  }
+}
+
+.banner__btn {
+  background: $primary;
+  color: $white;
+  padding: 6px 12px;
+  font-size: $font-l;
+
+  &:hover {
+    box-shadow: 0 0 2px 2px $gray-2;
+  }
+}
+
+.banner {
+  background-image: url(../images/home-header.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include Pad {
+    background-image: url(../images/home-header-sm.png);
+  }
+}
+
+.banner__content {
+  padding: 296px 0;
+  flex-direction: column;
+  text-align: right;
+
+  @include Pad {
+    padding: 296px 36px;
+  }
+
+  @include Mobile {
+    padding: 144px 16px;
+    margin-right: 0;
+  }
+}
+
+// Main-intro
+.intro__area {
+  background-color: $smokewhite;
+  color: $secondary;
+  padding: 80px 0;
+
+  @include Mobile {
+    padding: 40px 0;
+  }
+}
+
+.intro__title {
+  font-size: $font-3xl;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 24px;
+
+  @include Mobile {
+    font-size: $font-xl;
+  }
+}
+
+.intro__feature__list {
+  gap: 24px;
+  justify-content: space-between;
+
+  @include Pad {
+    flex-wrap: wrap;
+    gap: 36px 24px;
+  }
+
+  @include Mobile {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}
+
+.intro__feature__item {
+  width: 306px;
+  .material-icons-outlined{
+    font-size: 80px;
+    display: block;
+    text-align: center;
+    margin-bottom: 24.33px;
+  }
+  @include Pad {
+    width: calc((100% - 24px) / 2);
+  }
+  @include Mobile {
+    width: 100%;
+  }
+}
+
+
+.intro__feature__subtitle {
+  font-size: $font-xl;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.intro__feature__narrative {
+  color: $black;
+}
+
+// classic-series
+.classic__series__area {
+  padding: 80px 0;
+
+  @include Mobile {
+    padding: 40px 0;
+  }
+}
+
+.classic__series__title {
+  color: $secondary;
+  font-size: $font-3xl;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 48px;
+
+  @include Mobile {
+    font-size: $font-xl;
+    margin-bottom: 24px;
+  }
+}
+
+@include Pad {
+  .classic__series__list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.classic__series__item {
+  width: calc((100% - 48px) / 3);
+  margin-bottom: 0;
+  margin-right: 24px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include Pad {
+    width: 50%;
+    margin-right: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  @include Mobile {
+    width: 100%;
+  }
+}
+
+.classic__series__link {
+  display: block;
+  width: 100%;
+
+  img {
+    margin-bottom: 8px;
+  }
+}
+
+.classic__series__type {
+  font-size: $font-3xl;
+  color: $primary;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 0;
+
+  @include Mobile {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+// co-branding
+.co__branding__area {
+  background-image: url(../images/index-bg.png);
+  background-position: center;
+  background-size: cover;
+  padding: 80px 0;
+
+  @include Pad {
+    background-image: url(../images/index-bg-sm.png);
+  }
+
+  @include Pad {
+    padding: 40px 0;
+  }
+}
+
+.co__branding__title {
+  text-align: center;
+  margin-bottom: 48px;
+  font-weight: 700;
+  font-size: $font-3xl;
+  color: $white;
+
+  @include Mobile {
+    font-size: $font-xl;
+    margin-bottom: 24px;
+  }
+}
+
+.co__branding__type {
+  margin-bottom: 0;
+  padding: 8px 0;
+  text-align: center;
+  font-style: italic;
+  font-weight: 700;
+  font-size: $font-3xl;
+  color: $primary;
+  background: $white;
+  border-right: 1px solid $gray-1;
+
+  @include Mobile {
+    margin-bottom: 0;
+  }
+}
+
+.co__branding__list {
+  @include Pad {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+}
+
+.co__branding__item {
+  @include Pad {
+    width: 100%;
+
+    &:first-child {
+      margin-bottom: 24px;
+    }
+  }
+
+  @include Mobile {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    .co__branding__pic__1 {
+      content: url(../images/home-section4-1-sm.png);
+    }
+
+    .co__branding__pic__2 {
+      content: url(../images/home-section4-2-sm.png);
+    }
+  }
+}
+
+// recommendation
+.recommendation__area {
+  padding: 80px 0;
+
+  @include Mobile {
+    padding: 40px 0;
+  }
+}
+
+.recommendation__title {
+  font-size: $font-3xl;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 48px;
+  color: $secondary;
+
+  @include Mobile {
+    font-size: $font-xl;
+  }
+}
+
+.recommendation__list {
+  gap: 24px;
+
+  @include Pad {
+    flex-wrap: wrap;
+  }
+}
+
+.recommendation__item {
+  width: calc((100% - 72px) / 4);
+  min-height: 511px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px $gray-1;
+
+  @include Pad {
+    width: calc((100% - 24px) / 2);
+  }
+
+  @include Mobile {
+    width: 100%;
+  }
+}
+
+.recommendation__link {
+  flex-direction: column;
+  height: 100%;
+
+  .client__pic {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .recommendation__content {
+    padding: 16px;
+    height: 40%;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 2;
+
+    .client__name {
+      margin-bottom: 8px;
+    }
+
+    .recommendation__date {
+      color: $gray-2;
+      font-size: $font-xs;
+    }
+  }
+}
+
+.recommendation__main {
+  @include Pad {
+    margin-bottom: 48px;
+  }
+}
+
+
+//contact-us
+.contac__us__area {
+  padding: 80px 0;
+  background: $smokewhite;
+
+  @include Mobile {
+    padding: 40px 0;
+  }
+}
+
+.contact__form {
+  width: 50%;
+  margin: 0 auto;
+
+  @include Pad {
+    width: 63%;
+  }
+
+  @include Mobile {
+    width: 100%;
+  }
+}
+
+.contact__title {
+  font-size: $font-3xl;
+  color: $secondary;
+  font-weight: 700;
+  margin-bottom: 48px;
+  text-align: center;
+
+  @include Pad {
+    margin-bottom: 24px;
+  }
+
+  @include Mobile {
+    font-size: $font-xl;
+  }
+}
+
+.contact__content {
+  font-size: $font-l;
+  margin-bottom: 24px;
+
+  @include Pad {
+    font-size: $font-s;
+    margin-bottom: 24px;
+  }
+}
+
+.contact__form__group {
+  margin-bottom: 16px;
+
+  .form__group__title {
+    margin-bottom: 8px;
+  }
+
+  .client__feedback {
+    height: 136px;
+  }
+
+  input,
+  .client__feedback {
+    padding: 6px 12px;
+    width: 100%;
+    border: 1px solid $black;
+    background: $smokewhite;
+  }
+}
+
+.contact__policy__degree {
+  margin-bottom: 48px;
+}
+
+.contact__submit__button {
+  width: 65.4%;
+  margin: 0 auto;
+
+  input[type=submit] {
+    width: 100%;
+    padding: 16px 0;
+    border: none;
+    cursor: pointer;
+    background: $primary;
+    color: $white;
+    &:hover{
+      position: relative;
+      top:1.2px;
+      left:1.2px;
+    }
+  }
+
+  @include Pad {
+    width: 58%;
+  }
+
+  @include Mobile {
+    width: 100%;
+  }
+}
